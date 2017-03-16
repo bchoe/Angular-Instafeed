@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular-Insta</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+
+<body ng-app="instaFeed" ng-controller="instaFeedController">
+
+  <div class="bar">
+    <h1 class="title">frenZone</h1>
+    <input type="text" ng-model="searchCaption" />
+    <div class="icons">
+      <a ng-click="display='grid'" class="grid-icon"></a>
+      <a ng-click="display='list'" class="list-icon"></a>
+    </div>
+  </div>
+
+  <div ng-attr-class='{{display}}' >
+      <div class="picture"  ng-repeat="picture in pictures.data | filter:searchCaption">
+        <div class="pic" ng-switch on="picture.type">
+          <img ng-src="{{ picture.images.standard_resolution.url }}" />
+        </div>
+        <div>
+          <ul class="caption">{{ picture.caption.text }}</ul>
+        </div>
+      </div>
+  </div>
+
+
+  <!-- end of controller -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="js/myApp.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/instafeed.js"></script>
+  <script src="js/values.js"></script>
+</body>
+</html>
