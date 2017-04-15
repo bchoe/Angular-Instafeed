@@ -25,11 +25,9 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-
 }
 
 .title {
-  /*flex: 1 0 0;*/
   align-self: flex-start;
   padding-left: 10px;
   font-family: 'Lobster', cursive;
@@ -97,18 +95,14 @@ body {
   padding-right: 10px;
   width:90%;
   height:90%;
-
 }
 
 .list {
-  /*display: flex;*/
-  /*flex-flow: column wrap;*/
   align-items: center;
   width: auto;
   height:auto;
   margin-left:auto;
   margin-right:auto;
-
 }
 
 .grid img {
@@ -117,16 +111,13 @@ body {
   height:250px;
   margin-left:auto;
   margin-right:auto;
-
 }
 
 .list img {
   width:60%;
   height:60%;
-  /*padding-left: 200px;*/
   margin-left: 25%;
   margin-right: 10%;
-
 }
 
 .caption {
@@ -143,5 +134,4 @@ body {
 .pic {
   width: 100%;
   height:100%;
-
 }
